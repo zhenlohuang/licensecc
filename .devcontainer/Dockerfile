@@ -10,16 +10,18 @@ RUN sed -i s/archive.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list && \
     apt install -y curl git gnupg jq lsb-release sudo unzip wget zip
 
 RUN apt install -y \
-    build-essential \
-    gcc \
-    g++ \
     cmake \
-    git \
-    make \
-    ninja-build \
+    valgrind \
     libssl-dev \
-    libboost-all-dev \
-    valgrind
+    zlib1g-dev \
+    libboost-test-dev \
+    libboost-filesystem-dev \
+    libboost-iostreams-dev \
+    libboost-program-options-dev \
+    libboost-system-dev \
+    libboost-thread-dev \
+    libboost-date-time-dev \
+    build-essential
 
 SHELL ["/bin/bash", "-c"]
 
